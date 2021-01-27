@@ -1,16 +1,16 @@
 set -e
 
-if [[ $# == 0 ]]; then
-  echo -e "\
-Usage syntax: ./build.sh <TARGET>
+# if [[ $# == 0 ]]; then
+#   echo -e "\
+# Usage syntax: ./build.sh <TARGET>
 
-Notes:
-  * You can specify multiple targets.
-  * If no targets are specified, *all* of them will be built.
-  * To clean a target prefix it with \"clean_\".
-  * To clean all targets just use \"clean\"."
-  exit 1
-fi
+# Notes:
+#   * You can specify multiple targets.
+#   * If no targets are specified, *all* of them will be built.
+#   * To clean a target prefix it with \"clean_\".
+#   * To clean all targets just use \"clean\"."
+#   exit 1
+# fi
 
 if [ -z "$(docker images -q inav-build)" ]; then
   echo -e "*** Building image\n"
