@@ -24,7 +24,7 @@ if [ ! -d ./build ]; then
 fi
 
 echo -e "*** Building targets [$@]\n"
-docker run --rm -it -v "$(pwd)":/src inav-build $@
+docker run --rm -v "$(pwd)":/src inav-build $@
 
 if ls ./build/*.hex &> /dev/null; then
   echo -e "\n*** Built targets in ./build:"
